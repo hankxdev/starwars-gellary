@@ -70,7 +70,7 @@ const ListPage = ({ name }: PropTypes): JSX.Element => {
 
   return (
     <div className="mt-2">
-      <input placeholder="press enter to search" className="form-control" value={query} onChange={handleSearch} />
+      <input placeholder="type to search anything" className="form-control" value={query} onChange={handleSearch} />
       {
         filteredList.length > 0 ? (
           <FullHeightList>
