@@ -46,6 +46,11 @@ const ListPage = ({ name }: PropTypes): JSX.Element => {
     setFilteredList(filtered)
   }, [query, state[DataListType[listName]]])
 
+  // reset the query while switch page
+  useEffect(() => {
+    setQuery('')
+  }, [name])
+
   const { pathName, displayItems } = getConfigForPage(name)
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,7 +70,7 @@ const ListPage = ({ name }: PropTypes): JSX.Element => {
 
   return (
     <div className="mt-2">
-      <input placeholder="press enter to search" className="form-control" onChange={handleSearch} />
+      <input placeholder="press enter to search" className="form-control" value={query} onChange={handleSearch} />
       {
         filteredList.length > 0 ? (
           <FullHeightList>
