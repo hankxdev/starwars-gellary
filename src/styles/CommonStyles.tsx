@@ -12,9 +12,10 @@ export const theme = {
 export const ItemHeader = styled.div`
   background-color: ${(props) => props.theme.colors.yellow};
   display: inline-block;
-  min-width: 120px;
+  width: 130px;
   padding: 10px;
   margin-right: 10px;
+  
   strong{
     text-transform: capitalize;
     color: ${(props) => props.theme.fontColor};;

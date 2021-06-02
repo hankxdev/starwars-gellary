@@ -40,10 +40,19 @@ const ListItemDetails = ({ itemName }:PropType): JSX.Element => {
     if (list.length > 1) {
       setItem(list.find((p) => p.name === name))
     } else {
+      dispatch({
+        type: 'SET_LOADING',
+        payload: true
+      })
       getListItem(Number(id), itemName).then((itm) => {
         setItem(itm === null ? undefined : itm)
       }).catch(() => {
         setItem(undefined)
+      }).finally(() => {
+        dispatch({
+          type: 'SET_LOADING',
+          payload: false
+        })
       })
     }
   }, [])

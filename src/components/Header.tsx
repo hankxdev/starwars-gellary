@@ -3,8 +3,8 @@ import React from 'react';
 
 const Header = ():JSX.Element => (
   <header>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <div className="container">
         <div className="" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">

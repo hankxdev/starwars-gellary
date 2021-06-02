@@ -77,7 +77,7 @@ const ListPage = ({ name }: PropTypes): JSX.Element => {
             <div className="row d-flex flex-wrap">
               {
                 filteredList.map((item) => (
-                  <div className="col-4" key={item.name}>
+                  <div className="col-12 col-md-4" key={item.name}>
                     <Card pathName={pathName} displayItems={displayItems} itemData={item} />
                   </div>
                 ))
